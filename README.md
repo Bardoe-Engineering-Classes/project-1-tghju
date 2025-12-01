@@ -33,35 +33,38 @@ Some possible inputs and outputs:
 ### Input Devices
 
 1. Input #1:  
-   - Type:  
-   - Pico pin:  
+   - Type: Potentiometer
+   - Pico pin: ADC0/GP26
    - What it controls:  
 
 2. Input #2:  
-   - Type:  
-   - Pico pin:  
+   - Type: Potentiometer
+   - Pico pin: ADC1/GP27
    - What it controls:  
 
-(Add more if you choose additional inputs.)
+3. Input #3:
+   - Type: Potentiometer
+   - Pico pin: ADC2/GP28
+   - What it controls:
+
 
 ### Output Devices
 
 1. Output #1:  
-   - Type:  
-   - Pico pin:  
-   - Behavior:  
+   - Type: RGB LED
+   - Pico pin: GP15  
+   - Behavior: Red color
 
 2. Output #2:  
-   - Type:  
-   - Pico pin:  
-   - Behavior:  
+   - Type: RGB LED 
+   - Pico pin: GP14
+   - Behavior: Green color 
 
 3. Output #3:  
-   - Type:  
-   - Pico pin:  
-   - Behavior:  
+   - Type: RGB LED
+   - Pico pin: GP13
+   - Behavior: Blue color  
 
-(Add more if you choose additional outputs.)
 
 ---
 
@@ -72,6 +75,8 @@ Describe what you intended to build before you started wiring and coding.
 - What is your system supposed to do?  
 - How should the inputs affect the outputs?  
 - What are the three distinct output behaviors you planned?  
+
+My idea is to have three potentiometers each change the strength of one of the colors of an RGB LED. This makes it easy to make different colors by having different combinations of the three and their intensities.
 
 ---
 
@@ -113,6 +118,8 @@ Describe the main challenges you encountered while working on this project.
 
 Be as specific as possible.
 
+I did not have any major issues. I started by trying out the RGB LED to familiarize myself with it. After that, I used one potentiometer on one color to continue testing. Once that worked, I added the other potentiometers. The only issues I had were from missing code I needed to change when going from single LED to RGB LED and when adding in potentiometers.
+
 ---
 
 ## Final Design vs. Initial Plan
@@ -121,7 +128,9 @@ Explain how your final project differs from your initial plan.
 
 - Did you change any devices (inputs or outputs)?  
 - Did any behaviors change or get simplified?  
-- Did you add any new features?  
+- Did you add any new features? 
+
+In one of my very first ideas, I considered using a joystick to control two of the LEDs. I decided to first use three potentiometers because it's easier to figure out and more intuitive to use when finished. Overall, the result is exactly how I imagined.
 
 ---
 
