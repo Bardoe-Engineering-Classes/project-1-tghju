@@ -34,18 +34,18 @@ Some possible inputs and outputs:
 
 1. Input #1:  
    - Type: Potentiometer
-   - Pico pin: ADC0/GP26
-   - What it controls:  
+   - Pico pin: ADC0/GP26/Pin 31
+   - What it controls: The amount of red
 
 2. Input #2:  
    - Type: Potentiometer
-   - Pico pin: ADC1/GP27
-   - What it controls:  
+   - Pico pin: ADC1/GP27/Pin 32
+   - What it controls: The amount of green
 
 3. Input #3:
    - Type: Potentiometer
-   - Pico pin: ADC2/GP28
-   - What it controls:
+   - Pico pin: ADC2/GP28/Pin 34
+   - What it controls: The amount of blue
 
 
 ### Output Devices
@@ -76,7 +76,7 @@ Describe what you intended to build before you started wiring and coding.
 - How should the inputs affect the outputs?  
 - What are the three distinct output behaviors you planned?  
 
-My idea is to have three potentiometers each change the strength of one of the colors of an RGB LED. This makes it easy to make different colors by having different combinations of the three and their intensities.
+My idea is to have three potentiometers each change the strength of one of the colors of an RGB LED. They change the strength by adjusting the frequency of the light being on or off. This makes it easy to make different colors by having different combinations of the three and their intensities.
 
 ---
 
@@ -86,15 +86,23 @@ Describe or sketch your circuit here. You may include a diagram as an image or l
 
 - How are power and ground distributed?  
 - Which pins are used for each input and output?  
-- Any special components (resistors, transistors, etc.)?  
+- Any special components (resistors, transistors, etc.)? 
+
+The RGB wiring is on the top left half while the potentiometer wiring is on the right side. The RGB light has four wires, three are for the lights, each going through a resistor first. The ground is connected directly. For each potentiometer there are three wires. The top goes to the power rail, the bottom the ground rail, and the middle goes to an ADC pin. The power rail has one wire going to Pin 36 while the ground rail goes to Pin 23.
 
 ### Pin Mapping Table
 
 | Device        | Type (Input/Output) | Pico Pin | Notes              |
 |---------------|---------------------|----------|--------------------|
-|               |                     |          |                    |
-|               |                     |          |                    |
-|               |                     |          |                    |
+| Potentiometer | Input               | Pin 31   | Red Control        |
+| Potentiometer | Input               | Pin 32   | Green Control      |
+| Potentiometer | Input               | Pin 34   | Blue Control       |
+| RGB Light     | Output              | Pin 20   | Red Lighting       |
+| RGB Light     | Output              | Pin 19   | Green Lighting     |
+| RGB Light     | Output              | Pin 17   | Blue Lighting      |
+| Potentiometer | For Input           | Pin 23   | Ground for Pots    |
+| Potentiometer | For Input           | Pin 36   | Power for Pots     |
+| RGB Light     | For Output          | Pin 18   | Ground for RGB     |
 
 ---
 
@@ -130,7 +138,7 @@ Explain how your final project differs from your initial plan.
 - Did any behaviors change or get simplified?  
 - Did you add any new features? 
 
-In one of my very first ideas, I considered using a joystick to control two of the LEDs. I decided to first use three potentiometers because it's easier to figure out and more intuitive to use when finished. Overall, the result is exactly how I imagined.
+In one of my very first ideas, I considered using a joystick to control two of the LEDs. I decided to use three potentiometers instead because it's easier to figure out and more intuitive to use when finished. Overall, the result is exactly how I imagined.
 
 ---
 
