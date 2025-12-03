@@ -92,17 +92,17 @@ The RGB wiring is on the top left half while the potentiometer wiring is on the 
 
 ### Pin Mapping Table
 
-| Device        | Type (Input/Output) | Pico Pin | Notes              |
-|---------------|---------------------|----------|--------------------|
-| Potentiometer | Input               | Pin 31   | Red Control        |
-| Potentiometer | Input               | Pin 32   | Green Control      |
-| Potentiometer | Input               | Pin 34   | Blue Control       |
-| RGB Light     | Output              | Pin 20   | Red Lighting       |
-| RGB Light     | Output              | Pin 19   | Green Lighting     |
-| RGB Light     | Output              | Pin 17   | Blue Lighting      |
-| Potentiometer | For Input           | Pin 23   | Ground for Pots    |
-| Potentiometer | For Input           | Pin 36   | Power for Pots     |
-| RGB Light     | For Output          | Pin 18   | Ground for RGB     |
+| Device        | Type (Input/Output) | Pico Pin     | Notes              |
+|---------------|---------------------|--------------|--------------------|
+| Potentiometer | Input               | Pin 31 (GP26)| Red Control        |
+| Potentiometer | Input               | Pin 32 (GP27)| Green Control      |
+| Potentiometer | Input               | Pin 34 (GP28)| Blue Control       |
+| RGB Light     | Output              | Pin 20 (GP15)| Red Lighting       |
+| RGB Light     | Output              | Pin 19 (GP14)| Green Lighting     |
+| RGB Light     | Output              | Pin 17 (GP13)| Blue Lighting      |
+| Potentiometer | For Input           | Pin 23 (GND) | Ground for Pots    |
+| Potentiometer | For Input           | Pin 36 (3V3) | Power for Pots     |
+| RGB Light     | For Output          | Pin 18 (GND) | Ground for RGB     |
 
 ---
 
