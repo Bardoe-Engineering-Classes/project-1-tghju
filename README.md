@@ -150,6 +150,7 @@ If you had more time, what would you improve or add?
 - Better physical layout  
 - More robust error handling in code  
 
+My result leaves me satified since it works exactly how I expected it to. If I had a lot more time, I would try my other idea of using one joystick to choose a color by moving around like on a color wheel.
 ---
 
 ## AI Use Statement (If Applicable)
